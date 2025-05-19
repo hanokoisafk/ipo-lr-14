@@ -1,0 +1,13 @@
+{% extends "zoo_shop/homePage.html" %} 
+{% block content %}
+<title>{% block title %}{{ title }}{% endblock %}</title>
+<div class="content">
+    {% if qualification %}
+        <h1>{{ qualification.name }}</h1>
+        <p><strong>ID:</strong> {{ qualification.id }}</p>
+    {% else %}
+        <p>Квалификация не найдена</p>
+    {% endif %}
+    <a href="{% url 'spec_list' %}">Назад к списку</a>
+</div>
+{% endblock %}
