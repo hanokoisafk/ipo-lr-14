@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'garden_shop/css/main.css' %}" type="text/css" />
+</head>
+
+<body>
+	<aside>
+		<ul>
+			<a href="{% url 'home' %}" class="nav-item"><i class="fas fa-car"></i> Главная страница</a></br>
+			<a href="{% url 'about' %}" class="nav-item"><i class="fas fa-car"></i> Об авторе</a></br>
+			<a href="{% url 'aboutShop' %}" class="nav-item"><i class="fas fa-car"></i> Об магазине зоотоваров</a><br>
+		</ul>
+	</aside>
+
+	<main>
+		{% block tittle %}{% endblock %}
+		{% block content %}{% endblock %}
+	</main>
+</body>
+
+</html>
